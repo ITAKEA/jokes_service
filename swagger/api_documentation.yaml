@@ -1,0 +1,19 @@
+responses:
+  200:
+    description: API documentation with all available endpoints
+    schema:
+      type: object
+      properties:
+        endpoints:
+          type: array
+          items:
+            type: object
+            properties:
+              path:
+                type: string
+              method:
+                type: string
+              description:
+                type: string
+              response:
+                type: string

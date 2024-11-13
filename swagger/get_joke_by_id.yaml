@@ -1,0 +1,25 @@
+parameters:
+  - name: joke_id
+    in: path
+    type: integer
+    required: true
+    description: ID of the joke to retrieve
+responses:
+  200:
+    description: The requested joke
+    schema:
+      type: object
+      properties:
+        id:
+          type: integer
+        setup:
+          type: string
+        punchline:
+          type: string
+  404:
+    description: Joke not found
+    schema:
+      type: object
+      properties:
+        error:
+          type: string
