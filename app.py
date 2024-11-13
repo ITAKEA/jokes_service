@@ -4,7 +4,42 @@ from jokes_data import jokes
 from flasgger import Swagger, swag_from
 
 app = Flask(__name__)
-swagger = Swagger(app)
+
+# Configure Swagger template
+template = {
+    "swagger": "2.0",
+    "info": {
+        "title": "Joke Service API",
+        "description": "A RESTful API service that provides jokes",
+        "version": "1.0.0",
+        "contact": {
+            "name": "Joke Service API"
+        }
+    },
+    "basePath": "/",  # base bash for blueprint registration
+    "schemes": [
+        "http",
+        "https"
+    ],
+    "operationId": "getmyData"
+}
+
+swagger_config = {
+    "headers": [],
+    "specs": [
+        {
+            "endpoint": 'apispec_1',
+            "route": '/apispec_1.json',
+            "rule_filter": lambda rule: True,  # all in
+            "model_filter": lambda tag: True,  # all in
+        }
+    ],
+    "static_url_path": "/flasgger_static",
+    "swagger_ui": True,
+    "specs_route": "/apidocs/"
+}
+
+swagger = Swagger(app, template=template, config=swagger_config)
 
 @app.route('/', methods=['GET'])
 @swag_from('swagger/root.yaml')

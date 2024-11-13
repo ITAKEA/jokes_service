@@ -1,3 +1,10 @@
+tags:
+  - name: jokes
+    description: Jokes endpoints
+summary: Get a random joke
+description: Returns a randomly selected joke from the collection
+produces:
+  - application/json
 responses:
   200:
     description: A random joke
@@ -6,7 +13,10 @@ responses:
       properties:
         id:
           type: integer
+          example: 2
         setup:
           type: string
+          example: "What do you call a bear with no teeth?"
         punchline:
           type: string
+          example: "A gummy bear!"

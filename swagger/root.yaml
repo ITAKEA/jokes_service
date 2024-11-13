@@ -1,3 +1,10 @@
+tags:
+  - name: root
+    description: Root endpoint providing service information
+summary: Get service information
+description: Returns basic information about the Joke Service
+produces:
+  - application/json
 responses:
   200:
     description: Service information and available endpoints
@@ -6,11 +13,16 @@ responses:
       properties:
         service:
           type: string
+          example: "Joke Service"
         version:
           type: string
+          example: "1.0.0"
         description:
           type: string
+          example: "A RESTful API service that provides jokes"
         documentation:
           type: string
+          example: "/api"
         health:
           type: string
+          example: "/health"

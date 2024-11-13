@@ -1,3 +1,10 @@
+tags:
+  - name: documentation
+    description: API documentation endpoint
+summary: Get API documentation
+description: Returns detailed information about all available endpoints
+produces:
+  - application/json
 responses:
   200:
     description: API documentation with all available endpoints
@@ -11,9 +18,13 @@ responses:
             properties:
               path:
                 type: string
+                example: "/api/jokes"
               method:
                 type: string
+                example: "GET"
               description:
                 type: string
+                example: "Get all available jokes"
               response:
                 type: string
+                example: "Array of joke objects"

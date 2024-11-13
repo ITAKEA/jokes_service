@@ -1,3 +1,10 @@
+tags:
+  - name: jokes
+    description: Jokes endpoints
+summary: Get all jokes
+description: Returns a list of all available jokes
+produces:
+  - application/json
 responses:
   200:
     description: List of all jokes
@@ -8,7 +15,10 @@ responses:
         properties:
           id:
             type: integer
+            example: 1
           setup:
             type: string
+            example: "Why did the scarecrow win an award?"
           punchline:
             type: string
+            example: "Because he was outstanding in his field!"
