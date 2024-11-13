@@ -1,3 +1,4 @@
+---
 parameters:
   - name: joke_id
     in: path

@@ -1,3 +1,4 @@
+---
 responses:
   200:
     description: Health check status
