@@ -1,8 +1,0 @@
-responses:
-  200:
-    description: Health check status
-    schema:
-      type: object
-      properties:
-        status:
-          type: string
