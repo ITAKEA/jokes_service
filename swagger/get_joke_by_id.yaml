@@ -1,17 +1,9 @@
-tags:
-  - name: jokes
-    description: Jokes endpoints
-summary: Get joke by ID
-description: Returns a specific joke based on its ID
-produces:
-  - application/json
 parameters:
   - name: joke_id
     in: path
     type: integer
     required: true
     description: ID of the joke to retrieve
-    example: 1
 responses:
   200:
     description: The requested joke
@@ -20,13 +12,10 @@ responses:
       properties:
         id:
           type: integer
-          example: 1
         setup:
           type: string
-          example: "Why did the scarecrow win an award?"
         punchline:
           type: string
-          example: "Because he was outstanding in his field!"
   404:
     description: Joke not found
     schema:
@@ -34,4 +23,3 @@ responses:
       properties:
         error:
           type: string
-          example: "Joke not found"
