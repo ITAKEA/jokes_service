@@ -1,0 +1,14 @@
+responses:
+  200:
+    description: List of all jokes
+    schema:
+      type: array
+      items:
+        type: object
+        properties:
+          id:
+            type: integer
+          setup:
+            type: string
+          punchline:
+            type: string
